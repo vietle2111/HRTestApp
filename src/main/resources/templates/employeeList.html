@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title> Employee Details </title>
+</head>
+<body>
+<table style="width: 50%" border="1">
+    <colgroup>
+       <col span="1" style="width: 5%;">
+       <col span="1" style="width: 15%;">
+       <col span="1" style="width: 15%;">
+       <col span="1" style="width: 15%;">
+    </colgroup>
+	<th style="background-color: #aaa">ID</th> 
+	<th style="background-color: #aaa">NAME</th>
+	<th style="background-color: #aaa">SALARY</th>
+	<th style="background-color: #aaa">DEPT_ID</th>
+    <tbody>
+	        <tr th:each="emp: ${empList}">
+	            <td style="text-align:center" th:text="${emp.id}"></td>
+	            <td style="text-align:left"><font color="blue" th:text="${emp.name}"></font></td>
+	            <td style="text-align:center" th:text="${emp.salary}"></td>
+	            <td style="text-align:center" th:text="${emp.d.id}"></td>
+	        </tr>
+    </tbody>
+</table>
+<div style="width: 50%; float:left">
+	<input onclick='javascript:window.history.back()' value='Back' type='button' />
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>HR Application</title>
+</head>
+<body>
+	<h1>Employee Management </h1>
+	
+	<form action="employees" method="get">
+	
+		<div id="content" style="float:left; width:100%">
+				<div style="float:left; width:15%">
+					<span><a>Employee ID:  </a>
+					</span><br><br/>
+					<span><a>Employee Name:</a>
+					</span><br><br>
+					<span><a>Salary:</a>
+					</span><br><br><br>
+					<span><a>Department ID:</a>
+					</span><br><br>
+					<span><a>Department Name:</a>
+					</span><br><br>
+					<span><a>Location:</a>
+					</span><br><br>
+					
+				</div>
+				<div style="float:left; width:25%">
+					<span><input type="text" name="emp_id" th:value="${emp.id}" required/>
+					</span><br><br/>
+					<span><input type="text" name="emp_name" th:value="${emp.name}"/>
+					</span><br><br>
+					<span><input type="text" name="emp_salary" th:value="${emp.salary}"/>
+					</span><br><br>
+					<span><input type="text" name="dept_id" th:value="${emp.d.id}"/>
+					</span><br><br>
+					<span><input type="text" name="dept_name" th:value="${emp.d.deptname}"/>
+					</span><br><br>
+					<span><input type="text" name="dept_loc" th:value="${emp.d.location}"/>
+					</span><br><br>
+				</div>
+		</div>
+		<div id="actionBtn" style="width:30%" align="center">
+			<input type="submit" name="find" value="Find" th:formaction="find"/>
+			<input type="submit" name="insert" value="Insert" th:formaction="insert"/>
+			<input type="submit" name="update" value="Update"/>
+			<input type="submit" name="delete" value="Delete" />
+			<input type="submit" name="findAll" value="Find All" th:formaction="list"/>
+		</div>
+		<div style="width:30%" align="center">
+		<br>
+		<p th:text="${msg}"></p>
+		</div>
+	</form>
+
+</body>
+</html>

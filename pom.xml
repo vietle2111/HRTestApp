@@ -8,9 +8,9 @@
 		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>hr.demo</groupId>
+	<groupId>hrappdemo</groupId>
 	<artifactId>HR</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2</version>
 	<name>HR</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
